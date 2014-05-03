@@ -1,6 +1,8 @@
 This directory provides a build process where you only need Node.js and npm. The default build (in the root of this project) is done with ruby / rake via the Rakefile.
 
-## build with npm
+## clone and build
+`$ git clone https://github.com/timaschew/vextab.git`  
+`$ cd vextab/contrib/docpad`  
 `$ npm install`  
 `$ make`
 
