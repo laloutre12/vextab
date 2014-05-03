@@ -1,0 +1,4 @@
+---
+moduleName: 'vextab_parser'
+---
+<%- @include('../bower_components/vextab/vextab.jison') %>

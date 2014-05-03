@@ -1,0 +1,30 @@
+---
+uglify: false
+---
+/* include__underscore */
+// used by vextab, vexflow
+<%- @include('../bower_components/underscore/underscore.js') %>
+
+/* include__paper.js */
+// paper.js for tracking notes when playing
+<%- @include('../bower_components/paperjs/paper-core.min.js') %>
+
+/* include__vexflow */
+// vexflow
+<%- @include('../bower_components/vexflow/vexflow-min.js') %>
+
+/* include__vextab_parser */
+<%- @include('./vextab_parser.js') %>
+
+/* include__tabdiv2_custom */
+// own version of tabdiv2, without auto initialization
+<%- @include('./tabdiv2.js') %>
+
+/* include__vextab artist vextab player */
+<%- @include('./artist.js') %>
+<%- @include('./vextab.js') %>
+<%- @include('./player.js') %>
+
+/* include__midijs and base64 binary */
+<%- @include('../bower_components/MIDI.js/MIDI.js') %>
+<%- @include('../bower_components/MIDI.js/base64binary.js') %>
