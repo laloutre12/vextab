@@ -1,0 +1,25 @@
+87c87,89
++     this.player = new Vex.Flow.Player(this.artist, options);
+
+-     opts = {};
+-     if (options) opts.soundfont_url = options.soundfont_url;
+-     this.player = new Vex.Flow.Player(this.artist, opts);
+135,143c137,144
++ Vex.Flow.TabDiv.start = function(opts) {
++   var instances = [];
++   var elements = $(Vex.Flow.TabDiv.SEL);
++   for (var i=0; i<elements.length; i++) {
++     elem = elements[i];
++     instances[i] = new Vex.Flow.TabDiv(elem, opts);
++   }
++   return instances;
++ };
+
+- // Automatic initialization.
+- Vex.Flow.TabDiv.start = function() {
+-   $(Vex.Flow.TabDiv.SEL).each(function(index) {
+-       new Vex.Flow.TabDiv(this);
+-   });
+- }
+- 
+- $(function() {if (Vex.Flow.TabDiv.SEL) { Vex.Flow.TabDiv.start() }});
