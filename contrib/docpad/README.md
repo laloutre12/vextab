@@ -53,7 +53,7 @@ see [demo-player.html](https://github.com/timaschew/vextab/blob/master/contrib/d
 2. **bower-installer** filters files which are needed for the build and copy them to `src/files/bower_components`
 3. **docpad** converts *coffee* and *jison* files and concat the dependencies to the build file `out/vextab.js`
 
-#### WTF? vextab is a dependency?
+#### WTF? vextab is a bower dependency?
 Yes, due to:
 
 - the rejected pull request [build process without ruby](https://github.com/0xfe/vextab/pull/38)
