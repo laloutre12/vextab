@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>vextab with player</title>
+        <script src="bower_components/jQuery/jquery.min.js"></script>
+        <script>
+            // wait until vextab and dependencies are loaded
+            $(document).ready(function() {
+                $('.loading').hide();
+                var input = [
+                    "options player=true tempo=140",
+                    "tabstave notation=true tablature=false",
+                    "notes C-D-E-F-G-A-B/4"
+                ];
+                $('.vex-tabdiv').text(input.join('\n'));
+                instances = Vex.Flow.TabDiv.start(
+                    {soundfont_url: "bower_components/MIDI.js/"}
+                );
+          });
+        </script>
+    </head>
+
+    <body>
+        <div class="vex-tabdiv" editor="true"></div>
+        <span class="loading">loading vextab ...</span>
+
+        <!-- load large file at the end -->
+        <script src="scripts/tabdiv.js"></script>
+    </body>
+</html>

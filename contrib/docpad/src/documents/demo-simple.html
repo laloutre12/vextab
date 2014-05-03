@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>simple vextab</title>
+        <script src="bower_components/jQuery/jquery.min.js"></script>
+        <script>
+            // wait until vextab and dependencies are loaded
+            $(document).ready(function() {
+                $('.loading').hide();
+                var input = "tabstave notation=true tablature=false";
+                $('.vex-tabdiv').text(input);
+                Vex.Flow.TabDiv.start();
+          });
+        </script>
+    </head>
+
+    <body>
+        <div class="vex-tabdiv"></div>
+        <span class="loading">loading vextab ...</span>
+
+        <!-- load large file at the end -->
+        <script src="scripts/tabdiv.js"></script>
+    </body>
+</html>
