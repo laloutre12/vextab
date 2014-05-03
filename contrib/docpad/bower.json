@@ -1,0 +1,40 @@
+{
+  "name": "vextab-docpad",
+  "version": "2.0.0",
+  "dependencies": {
+    "jquery": "jquery#1.11",
+    "paperjs": "paperjs/paper.js",
+    "underscore": "jashkenas/underscore",
+    "vexflow": "0xfe/vexflow",
+    "vextab": "0xfe/vextab",
+    "MIDI.js": "mudcube/MIDI.js"
+  },
+  "install": {
+    "path": "src/files/bower_components",
+    "sources": {
+      "jquery": [
+        "bower_components/jquery/dist/jquery.js",
+        "bower_components/jquery/dist/jquery.min.js",
+        "bower_components/jquery/dist/jquery.min.map"
+      ],
+      "paperjs": [
+        "bower_components/paperjs/dist/paper-core.min.js",
+        "bower_components/paperjs/dist/paper-core.js"
+      ],
+      "vextab": [
+        "bower_components/vextab/src/artist.coffee",
+        "bower_components/vextab/src/player.coffee",
+        "bower_components/vextab/src/tabdiv2.js",
+        "bower_components/vextab/src/vextab.coffee",
+        "bower_components/vextab/src/vextab.jison"
+      ],
+      "vexflow": "bower_components/vexflow/build/vexflow/vexflow-min.js",
+      "MIDI.js": [
+        "bower_components/MIDI.js/build/MIDI.js",
+        "bower_components/MIDI.js/inc/base64binary.js",
+        "bower_components/MIDI.js/soundfont/acoustic_grand_piano-mp3.js",
+        "bower_components/MIDI.js/soundfont/acoustic_grand_piano-ogg.js"
+      ]
+    }
+  }
+}

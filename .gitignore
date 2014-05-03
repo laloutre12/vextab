@@ -1,3 +1,6 @@
 node_modules/*
 build/*
 Gemfile.lock
+contrib/docpad/out
+contrib/docpad/bower_components
+contrib/docpad/src/files/bower_components

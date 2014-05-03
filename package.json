@@ -10,6 +10,15 @@
     "licence": "MIT",
     "devDependencies": {
         "coffee-script": "*",
-        "jison": "*"
+        "jison": "*",
+        "docpad": ">=6.64.2",
+        "docpad-plugin-eco": ">=2.0.3",
+        "docpad-plugin-livereload": ">=2.5.4",
+        "docpad-plugin-coffeescript": ">=2.2.3",
+        "docpad-plugin-jison": "git+https://github.com/timaschew/docpad-plugin-jison",
+        "docpad-plugin-jade": "~2.6.2",
+        "bower": ">=1.2.8",
+        "bower-installer": "~0.7.1",
+        "docpad-plugin-uglify": "~2.4.0"
     }
 }
