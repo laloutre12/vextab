@@ -7,7 +7,7 @@
     "underscore": "jashkenas/underscore",
     "vexflow": "0xfe/vexflow",
     "vextab": "0xfe/vextab",
-    "MIDI.js": "mudcube/MIDI.js"
+    "midi.js": "mudcube/MIDI.js"
   },
   "install": {
     "path": "src/files/bower_components",
@@ -29,11 +29,11 @@
         "bower_components/vextab/src/vextab.jison"
       ],
       "vexflow": "bower_components/vexflow/build/vexflow/vexflow-min.js",
-      "MIDI.js": [
-        "bower_components/MIDI.js/build/MIDI.js",
-        "bower_components/MIDI.js/inc/base64binary.js",
-        "bower_components/MIDI.js/soundfont/acoustic_grand_piano-mp3.js",
-        "bower_components/MIDI.js/soundfont/acoustic_grand_piano-ogg.js"
+      "midi.js": [
+        "bower_components/midi.js/build/MIDI.js",
+        "bower_components/midi.js/inc/base64binary.js",
+        "bower_components/midi.js/soundfont/acoustic_grand_piano-mp3.js",
+        "bower_components/midi.js/soundfont/acoustic_grand_piano-ogg.js"
       ]
     }
   }
