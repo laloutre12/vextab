@@ -11,3 +11,9 @@ run: src/files/bower_components
 src/files/bower_components:
 	$(BOWER_INSTALLER)
 
+clean:
+	rm -rf out
+	rm -rf bower_components
+	rm -rf src/files/bower_components
+
+.PHONY: clean
