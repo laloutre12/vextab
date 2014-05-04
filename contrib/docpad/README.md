@@ -6,16 +6,18 @@ This directory provides a build process where you only need Node.js and npm. The
 `$ npm install`  
 `$ make`
 
-files are generated into the `out` directory
+files are generated into the `out` directory  
+to clean the generated files run this command: `make clean`
 
-## run a server and watch & reload automatically
+## run a server to watch & reload automatically
 `$ make run`  
-open `http://localhost:9778/demo-player.html`
+open `http://localhost:9778/demo-player.html`  
+(and start hacking the files in `src`)
 
 ## usage
 ### simple ([demo-simple.html](https://github.com/timaschew/vextab/blob/master/contrib/docpad/src/documents/demo-simple.html))
 1. include jQuery and the output file in your page
-`<script src="scripts/tabdiv.js"></script>`
+`<script src="tabdiv.js"></script>`
 2. create a div with the class **vex-tabdiv**
 `<div class="vex-tabdiv">tabstave notation=true</div>`
 3. wait until **tabdiv.js** is loaded, then init vextab 
@@ -31,13 +33,14 @@ open `http://localhost:9778/demo-player.html`
 
 see [demo-player.html](https://github.com/timaschew/vextab/blob/master/contrib/docpad/src/documents/demo-player.html)
 
+# development
 ## build process
 
 ### build output / content differs from the ruby-based version
 
 - dependencies are managed with bower
 - player.coffee is included
-- tabdiv.js was modified 
+- tabdiv2.js was modified 
     - auto initialization was removed
     - pass options from `Vex.Flow.TabDiv.start` to the `Vex.Flow.Player`
     - see the diff [tabdiv2.js-diff.log](https://github.com/timaschew/vextab/blob/master/contrib/docpad/tabdiv2.js-diff.log)
@@ -49,11 +52,15 @@ see [demo-player.html](https://github.com/timaschew/vextab/blob/master/contrib/d
 - **MIDI.js** - for playing the notes
 - **paperjs** - marking the notes which are played
 
+The dependencies/packages can be pinned to a specific version in the bower.json.
+
+If you are using a package that is a **git** endpoint, you may use any **tag**, **commit SHA**, or **branch name** as a version. For example: `<package>#<sha>`. Using branches is not recommended because the HEAD does not reference a fixed commit SHA.
+
 ### How it works?
 1. bower.json defines dependencies like MIDI.js, etc.
-2. **bower** installs the dependencies into `bower_components`
-2. **bower-installer** filters files which are needed for the build and copy them to `src/files/bower_components`
-3. **docpad** converts *coffee* and *jison* files and concat the dependencies to the build file `out/vextab.js`
+2. **bower-installer** installs the dependencies into `bower_components`
+2. **bower-installer** then filters files which are needed for the build and copy them to `src/files/bower_components`
+3. **docpad** converts *coffee* and *jison* files and concat the dependencies to the build file `out/tabdiv.js`
 
 #### WTF? vextab is a bower dependency?
 Yes, due to:
